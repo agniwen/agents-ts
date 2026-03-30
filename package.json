@@ -3,19 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "s01": "tsx ./src/s01_agent_loop.ts",
-    "s02": "tsx ./src/s02_tool_use.ts",
-    "s03": "tsx ./src/s03_todo_write.ts",
-    "s04": "tsx ./src/s04_subagent.ts",
-    "s05": "tsx ./src/s05_skill_loading.ts",
-    "s06": "tsx ./src/s06_context_compact.ts",
-    "s07": "tsx ./src/s07_task_system.ts",
-    "s08": "tsx ./src/s08_background_tasks.ts",
-    "s09": "tsx ./src/s09_agent_teams.ts",
-    "s10": "tsx ./src/s10_team_protocols.ts",
-    "s11": "tsx ./src/s11_autonomous_agents.ts",
-    "s12": "tsx ./src/s12_worktree_task_isolation.ts",
-    "full": "tsx ./src/s_full.ts"
+    "start": "tsx ./src/app.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0",
