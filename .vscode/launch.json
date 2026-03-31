@@ -1,0 +1,61 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Current TypeScript File",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["--import", "tsx"],
+      "program": "${file}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"],
+      "smartStep": true
+    },
+    {
+      "name": "Debug Selected Example",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["--import", "tsx"],
+      "program": "${workspaceFolder}/src/${input:entryFile}",
+      "envFile": "${workspaceFolder}/.env",
+      "console": "integratedTerminal",
+      "skipFiles": ["<node_internals>/**"],
+      "smartStep": true
+    },
+    {
+      "name": "Attach to Node Process",
+      "type": "node",
+      "request": "attach",
+      "processId": "${command:PickProcess}",
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ],
+  "inputs": [
+    {
+      "id": "entryFile",
+      "type": "pickString",
+      "description": "Choose a TypeScript entry file under src/",
+      "options": [
+        "s01_agent_loop.ts",
+        "s02_tool_use.ts",
+        "s03_todo_write.ts",
+        "s04_subagent.ts",
+        "s05_skill_loading.ts",
+        "s06_context_compact.ts",
+        "s07_task_system.ts",
+        "s08_background_tasks.ts",
+        "s09_agent_teams.ts",
+        "s10_team_protocols.ts",
+        "s11_autonomous_agents.ts",
+        "s12_worktree_task_isolation.ts",
+        "s_full.ts"
+      ],
+      "default": "s_full.ts"
+    }
+  ]
+}
